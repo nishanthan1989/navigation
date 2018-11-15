@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+   <meta http-equiv="cache-control" content="no-cache" />
+
+   <!-- [[ JAVASCRIPT ]] -->
+   <!-- 3rd Party -->
+   <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+   <!-- My Styles -->
+   <script src="js/page.js"></script>
+
+   <!-- [[ STYLES ]] -->
+   <!-- Brand Fonts (Champion) -->
+   <link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/pacbrands/bonds2/css/styles.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/base/default/afterpay/css/afterpay.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/pacbrands/bonds2/algoliasearch/bundle.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/pacbrands/bonds2/css/swiper.css" media="all" />
+
+   <!-- My Styles -->
+   <link rel="stylesheet" href="./styles.min.css">
+
+   <!-- Lucky orange -->
+   <script type='text/javascript'>
+      window.__lo_site_id = 122930;
+
+      (function() {
+         var wa = document.createElement('script'); wa.type = 'text/javascript'; wa.async = true;
+         wa.src = 'https://d10lpsik1i8c69.cloudfront.net/w.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(wa, s);
+      })();
+   </script>
+
+</head>
+<body id="index">
+
+   <nav class="img_nav">
+
+      <!-- Bonds & co -->
+      <div class="bonds_co">
+         <div class="bonds_co_logo">
+            <img src="images/nav/bonds-co-logo.gif" class="bandcologo">
+            <img src="images/nav/bco-chevron.gif" class="chevron">
+         </div>
+      </div>
+
+      <!-- 1st level selected cat -->
+      <div id="selected_cat_1" class="selected_cat_container">
+         <!-- Cat label gets added here -->
+         <a class="change">
+            Change
+         </a>
+      </div>
+      <div id="selected_cat_2" class="selected_cat_container">
+         <!-- Cat label gets added here -->
+         <a class="change">
+            Change
+         </a>
+      </div>
+      <div id="selected_cat_3" class="selected_cat_container">
+         <!-- Cat label gets added here -->
+         <a class="change">
+            Change
+         </a>
+      </div>
+
+      <!-- 1st level cat -->
+      <ul id="nav_main" class="cat_container" data-selected="selected_cat_1">
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="new">
+               <span class="img"><img src="images/nav/main-new.jpg"></span>
+               <span class="label">What's new</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="women">
+               <span class="img"><img src="images/nav/main-womens.jpg"></span>
+               <span class="label">Women</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="men">
+               <span class="img"><img src="images/nav/main-mens.jpg"></span>
+               <span class="label">Men</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="kids">
+               <span class="img"><img src="images/nav/main-kids.jpg"></span>
+               <span class="label">Kids</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="baby">
+               <span class="img"><img src="images/nav/main-baby.jpg"></span>
+               <span class="label">Baby</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sale">
+               <span class="img"><img src="images/nav/main-sale.jpg"></span>
+               <span class="label">Sale</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="stores">
+               <span class="img"><img src="images/nav/main-store-finder.jpg"></span>
+               <span class="label">Store finder</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="join">
+               <span class="img"><img src="images/nav/main-join-bonds-me.jpg"></span>
+               <span class="label">Join Bonds & Me</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sign_in">
+               <span class="img"><img src="images/nav/main-sign-in.jpg"></span>
+               <span class="label">Sign in</span>
+            </a>
+         </li>
+      </ul>
+
+      <!-- 2nd level cats -->
+      <!-- New -->
+      <ul id="nav_new" class="cat_container hide" data-selected="selected_cat_2">
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/main-new.jpg"></span>
+               <span class="label">View all</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Gifts for her</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Gifts for him</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Gifts for bubs</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Gifts for kids</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Personalised gifts</span>
+            </a>
+         </li>
+      </ul>
+
+      <!-- Women -->
+      <ul id="nav_women" class="cat_container hide" data-selected="selected_cat_2">
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/main-womens.jpg"></span>
+               <span class="label">View all</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">New In</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Underwear</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Bras</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Clothing</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Socks & tights</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Swimwear</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Maternity</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sleep</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Alternate Apparel</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Personalise my bonds</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Collections</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Offers</span>
+            </a>
+         </li>
+      </ul>
+
+      <!-- Men -->
+      <ul id="nav_men" class="cat_container hide" data-selected="selected_cat_2">
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/main-new.jpg"></span>
+               <span class="label">View all</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">New In</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Underwear</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Tops</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Clothing</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Socks & accessories</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Swimwear</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sleep</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Personalise my bonds</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Collections</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Offers</span>
+            </a>
+         </li>
+      </ul>
+
+      <!-- Kids -->
+      <ul id="nav_kids" class="cat_container hide" data-selected="selected_cat_2">
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/main-kids.jpg"></span>
+               <span class="label">View all</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Gifts for her</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Gifts for him</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Gifts for bubs</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Gifts for kids</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Personalised gifts</span>
+            </a>
+         </li>
+      </ul>
+
+      <!-- Baby -->
+      <ul id="nav_baby" class="cat_container hide" data-selected="selected_cat_2">
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/main-baby.jpg"></span>
+               <span class="label">View all</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">New in</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Girl's clothing</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Girl's underwear</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Boy's clothing</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Boy's underwear</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Tween clothing</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Socks & accessories</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sleepwear</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Personalise my Bonds</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Collections</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Shop offers</span>
+            </a>
+         </li>
+      </ul>
+
+      <!-- Sale -->
+      <ul id="nav_sale" class="cat_container hide" data-selected="selected_cat_2">
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/main-sale.jpg"></span>
+               <span class="label">View all</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Mens</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Womens</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Kids</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Baby</span>
+            </a>
+         </li>
+      </ul>
+
+      <!-- 3rd level cat -->
+      <ul id="nav_sub_sub_cat" class="cat_container hide" data-selected="selected_cat_3">
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">View all</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sub sub level cat</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sub sub level cat</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sub sub level cat</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sub sub level cat</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sub sub level cat</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sub sub level cat</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sub sub level cat</span>
+            </a>
+         </li>
+         <li class="nav_item">
+            <a href="#" class="btn_nav" data-link="sub_sub_cat">
+               <span class="img"><img src="images/nav/new-new.jpg"></span>
+               <span class="label">Sub sub level cat</span>
+            </a>
+         </li>
+      </ul>
+
+   </nav>
+
+   <div class="body">
+
+   </div>
+
+</body>
+</html>
