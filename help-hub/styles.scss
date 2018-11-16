@@ -1,0 +1,274 @@
+/* [[ Mixins ]] */
+
+
+
+/* [[ Variables ]] */
+
+
+
+/* [[ PAGE ]] */
+
+/* -- Overwrites --*/
+body {
+   padding-top: 0;
+   font-size: 16px;
+
+   &#index {
+      padding-bottom: 20px;
+   }
+}
+
+a {
+   -webkit-tap-highlight-color: rgba(0,0,0,0.5); /* Can we investigate adding this? The user has no indication of what they've pressed without it */
+
+   &:hover,
+   &:active {
+      text-decoration: none;
+   }
+}
+
+textarea {
+   width: 100%;
+   border: 2px solid #dbdddc;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+   margin-bottom: 7px;
+   margin-top: 7px;
+}
+
+/* Page title */
+.page_title {
+   h1 {
+      margin-bottom: 13px;
+   }
+}
+
+/* Search */
+.search {
+   margin-bottom: 10px;
+   color: #303030;
+   position: relative;
+
+   ::placeholder {
+      color: #303030;
+      opacity: 1;
+   }
+
+   .i_search {
+      position: absolute;
+      right: 10px;
+      font-size: 24px;
+      top: 13px;
+   }
+
+   .header_search_toggle {
+      font-style: normal;
+      font-size: 20px;
+      padding: 14px;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      &:before {
+         content: "\2715";
+      }
+   }
+
+   #search:focus {
+      &~ .i_search {
+         color: #fff;
+      }
+
+      &~ .header_search_toggle {
+         color: #fff;
+      }
+   }
+}
+
+/* Tiles */
+
+#index .tiles {
+   margin: 0 -5px;
+}
+
+.tiles {
+   margin: 10px -5px 0;
+
+   &:after {
+      display: block;
+      content: "";
+      clear: both;
+   }
+
+   .tile {
+      float: left;
+      width: 50%;
+      min-height: 140px;
+      background-color: #fff;
+      padding: 0 5px;
+      background-clip: content-box;
+      margin-bottom: 10px;
+      text-align: center;
+      position: relative;
+      color: #303030;
+
+      &:nth-of-type(2n+1) {
+         clear: left;
+      }
+   }
+
+   .img {
+      font-size: 45px;
+      position: relative;
+      top: 25px;
+
+      img {
+         margin: 0 auto;
+      }
+   }
+
+   .title {
+      width: calc(100% - 10px); //because of 'tile' background-clip
+      padding: 10px;
+      position: absolute;
+      bottom: 7px;
+      line-height: 18px;
+      font-weight: bold;
+      letter-spacing: 0.02em;
+   }
+}
+
+// Invividual tile sizing
+.tile {
+   &.orders {
+      .img {
+         font-size: 52px;
+      }
+   }
+
+   &.gc_vouchers {
+      .img {
+         font-size: 56px;
+      }
+   }
+
+   &.website {
+      img {
+         width: 44px;
+         margin: 2px auto 0;
+      }
+   }
+}
+
+/* Questions */
+.questions {
+   position: relative;
+
+   h4 {
+      margin-bottom: 6px;
+   }
+
+   ul {
+      li {
+      }
+   }
+
+   a {
+      padding: 4px 0 4px 15px;
+      color: #303030;
+      display: block;
+      width: 100%; //this makes questions easier to click on in mobile - please keep
+      position: relative;
+
+      &:before {
+         display: block;
+         content: '\2022';
+         position: absolute;
+         left: -1px;
+         font-size: 14px;
+         top: 4px;
+      }
+   }
+
+   &.most_popular_home {
+      top: 16px; //because of 'tile' margin-bottom
+   }
+
+   &.most_popular_cat {
+      margin-top: 15px;
+   }
+
+   &.sub_cat {
+      margin-bottom: 10px;
+   }
+}
+
+/* Search questions */
+.search_questions {
+   position: relative;
+   top: 15px;
+
+   .questions {
+      margin-bottom: 15px;
+   }
+
+   ul {
+      li.more {
+         a {
+            margin-top: 2px;
+            padding: 4px 0;
+            font-weight: bold;
+
+            &:before {
+               display: none;
+            }
+         }
+      }
+   }
+}
+
+/* Live chat button */
+.live_chat {
+   width: 100%;
+
+   .chat_container {
+      display: inline-block;
+      margin-left: -5px;
+
+      .i_chat {
+         color: #34dd58;
+         text-align: center;
+         font-size: 26px;
+         display: inline-block;
+         margin-right: 5px;
+      }
+
+      .text {
+         display: inline-block;
+         text-align: left;
+         clear: left;
+
+         span:first-of-type {
+            text-transform: none;
+            font-family: "Futura W01 Book",Futura,sans-serif;
+            font-size: 16px;
+            display: block;
+         }
+
+         span:last-of-type {
+            display: block;
+         }
+      }
+   }
+}
+
+/* Contact us form */
+.email_form {
+   input,
+   .select_wrap,
+   textarea {
+      margin-bottom: 10px;
+   }
+}
