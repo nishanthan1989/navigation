@@ -1,0 +1,95 @@
+/**
+ * Pacific Brands - Theme Fonts
+ *
+ * All fonts required for the theme.
+ *
+ * @category    design
+ * @package     pacbrands_champion2
+ * @copyright   Copyright (c) 2014 Pacific Brands Limited
+*/
+
+/* GothamCond Font */
+@font-face{
+  font-family:"GothamCond-Medium";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Medium.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Medium.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Medium.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Medium.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Medium.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Medium.svg#GothamCond-Medium") format("svg");
+}
+@font-face{
+  font-family:"GothamCond-MediumItalic";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-MediumItalic.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-MediumItalic.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-MediumItalic.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-MediumItalic.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-MediumItalic.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-MediumItalic.svg#GothamCond-MediumItalic") format("svg");
+}
+@font-face{
+  font-family:"GothamCond-Light";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Light.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Light.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Light.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Light.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Light.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Light.svg#GothamCond-Light") format("svg");
+}
+@font-face{
+  font-family:"GothamCond-LightItalic";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-LightItalic.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-LightItalic.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-LightItalic.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-LightItalic.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-LightItalic.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-LightItalic.svg#GothamCond-LightItalic") format("svg");
+}
+@font-face{
+  font-family:"GothamCond-Bold";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Bold.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Bold.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Bold.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Bold.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Bold.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-Bold.svg#GothamCond-Bold") format("svg");
+}
+@font-face{
+  font-family:"GothamCond-BoldItalic";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-BoldItalic.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-BoldItalic.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-BoldItalic.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-BoldItalic.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-BoldItalic.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/GothamCond-BoldItalic.svg#GothamCond-BoldItalic") format("svg");
+}
+
+@font-face{
+  font-family:"Helvetica Neue LT W04_71488918";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/f9872f03-b366-499d-9b0e-ce508b0a3539.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/f9872f03-b366-499d-9b0e-ce508b0a3539.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/f350f87a-2ea2-408b-98bb-580827d1a634.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/0552ce48-950c-471f-b843-1afac814d259.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/df2262d6-48cc-478c-aed1-5ce7421b4cf4.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/76aecb4d-a0cb-423c-80b9-ea42c5125a5d.svg#76aecb4d-a0cb-423c-80b9-ea42c5125a5d") format("svg");
+}
+@font-face{
+  font-family:"Helvetica Neue LT W0447LtCnObl";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/d17892b2-ecd1-4562-b5bd-7dc529b2f4ea.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/d17892b2-ecd1-4562-b5bd-7dc529b2f4ea.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/5e827235-9970-4ad4-b145-946850350402.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/8bf1c6e7-5861-4ecf-b4cd-d675363cd515.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/6d1402e9-3851-4665-b556-0f2ec7a5aa4a.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/716bc669-7d5f-48ea-912a-2475930edfde.svg#716bc669-7d5f-48ea-912a-2475930edfde") format("svg");
+}
+@font-face{
+  font-family:"Helvetica Neue LT W04_71489014";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/70921a99-d985-497d-a4e3-a485a3981384.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/70921a99-d985-497d-a4e3-a485a3981384.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/d0a337b6-b9f3-41c9-a0fb-390f5053a8de.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/1e2871fa-be08-40ea-9d56-b9cbf430ee6f.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/7fd11f14-9243-426f-a688-fa8923c854d3.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/12e1b239-f2ae-4968-953b-f766f46790b7.svg#12e1b239-f2ae-4968-953b-f766f46790b7") format("svg");
+}
+@font-face{
+  font-family:"Helvetica Neue LT W0477BdCnObl";
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/b5206541-ae43-46a2-9062-63e23d3ea74b.eot?#iefix");
+  src:url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/b5206541-ae43-46a2-9062-63e23d3ea74b.eot?#iefix") format("eot"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/b98bff0a-fd02-42a4-b1ac-6b46dcf5a24f.woff2") format("woff2"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/94961a74-d7e9-44d6-a398-d5dac1eb31c9.woff") format("woff"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/182ad19b-9e47-4e94-b54d-29c958f58c13.ttf") format("truetype"),url("https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/25476c01-eab8-40e6-bc69-0d28d4f8aff8.svg#25476c01-eab8-40e6-bc69-0d28d4f8aff8") format("svg");
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std Bold';
+  src: url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-BdCn.eot');
+  src: url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-BdCn.eot?#iefix') format('embedded-opentype'),
+  url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-BdCn.woff2') format('woff2'),
+  url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-BdCn.woff') format('woff'),
+  url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-BdCn.ttf') format('truetype'),
+  url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-BdCn.svg#https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-BdCn') format('svg');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue LT Std';
+  src: url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-LtCn.eot');
+  src: url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-LtCn.eot?#iefix') format('embedded-opentype'),
+  url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-LtCn.woff2') format('woff2'),
+  url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-LtCn.woff') format('woff'),
+  url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-LtCn.ttf') format('truetype'),
+  url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-LtCn.svg#https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/helvetica/HelveticaNeueLTStd-LtCn') format('svg');
+
+}
+
+/* Champion icon font */
+@font-face {
+  font-family: "champion";
+  src: url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/champion.eot?201506191316');
+  src: url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/champion.eot?201506191316#iefix') format('embedded-opentype'),
+       url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/champion.woff?201506191316') format('woff'),
+       url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/champion.ttf?201506191316') format('truetype'),
+       url('https://www.championusa.com.au/skin/frontend/pacbrands/champion2/fonts/champion.svg?201506191316#champion') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
