@@ -1,0 +1,38 @@
+/*
+@font-face {
+   font-family: "Tw Cen W01 Light";
+   src: url("../fonts/c5d23f79-fdaa-4d25-ab08-3581a871071b.eot?#iefix");
+   src: url("../fonts/c5d23f79-fdaa-4d25-ab08-3581a871071b.eot?#iefix") format("eot"),
+   url("../fonts/dc710dc3-3fbc-4e12-ae7b-546d7b24717d.woff2") format("woff2"),
+   url("../fonts/448541b8-7391-44d1-ba6f-f15a6be6bef4.woff") format("woff"),
+   url("../fonts/4350d8d3-4398-4258-9808-17118624a178.ttf") format("truetype"),
+   url("../fonts/d282e28f-8b9e-4c3c-9785-49812254b489.svg#d282e28f-8b9e-4c3c-9785-49812254b489") format("svg")
+}
+
+@font-face {
+   font-family: "Tw Cen W01 Medium";
+   src: url("../fonts/8624165c-9e93-4346-a219-990b0d920759.eot?#iefix");
+   src: url("../fonts/8624165c-9e93-4346-a219-990b0d920759.eot?#iefix") format("eot"),
+   url("../fonts/f73f3a87-0dc2-4041-87ea-656b797408a7.woff2") format("woff2"),
+   url("../fonts/d3817bf0-b3c3-4ff4-9955-924a3af74ca1.woff") format("woff"),
+   url("../fonts/aa686768-0d35-4f93-80d4-1a3c1491ff89.ttf") format("truetype"),
+   url("../fonts/de5c639d-b02a-4eeb-bbf3-494c4a0f5ce6.svg#de5c639d-b02a-4eeb-bbf3-494c4a0f5ce6") format("svg")
+}
+
+@font-face {
+   font-family: "Tw Cen W01 Bold";
+   src: url("../fonts/e1301bd9-09a5-4332-bb71-b93d745ab880.eot?#iefix");
+   src: url("../fonts/e1301bd9-09a5-4332-bb71-b93d745ab880.eot?#iefix") format("eot"),
+   url("../fonts/3db55513-298e-4f0d-a94e-96b48e114be7.woff2") format("woff2"),
+   url("../fonts/acccf3dc-5ffe-4534-9855-68770fc6df0b.woff") format("woff"),
+   url("../fonts/aea99fce-684b-4980-99fb-e2f941d19967.ttf") format("truetype"),
+   url("../fonts/c882c92e-18dc-4970-a181-26b2f055a956.svg#c882c92e-18dc-4970-a181-26b2f055a956") format("svg")
+}
+*/
+
+@font-face {
+   font-family: "Tw Cen W01 Medium";
+   src: url("f73f3a87-0dc2-4041-87ea-656b797408a7.woff2") format("woff2"),
+   url("d3817bf0-b3c3-4ff4-9955-924a3af74ca1.woff") format("woff"),
+   url("aa686768-0d35-4f93-80d4-1a3c1491ff89.ttf") format("truetype")
+}
