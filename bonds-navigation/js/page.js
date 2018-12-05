@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+   //var selectedCat1 = "#nav_main";
+   //var selectedCat2 = "#nav_women";
+
    //Animate in first Categories
    showNav($("#nav_main"));
 
@@ -38,7 +41,7 @@ $(document).ready(function() {
          navItem.animate({
             "top": navEndPos.top,
             "left": navEndPos.left
-         }, 1);
+         }, 0);
          navItem.addClass("clone"); // Handle other animations via CSS
 
          navContainer.css({"position": "absolute"}); // Added so incoming nav can position properly
@@ -51,33 +54,42 @@ $(document).ready(function() {
 
          // Wait for the moving animation to finish, then remove and reset old nav
          setTimeout(function(){
-            //$(this).toggle();
             navContainer.removeAttr("style").toggle();
-            navContainer.find(".btn_nav").not(this).each(function() {
-               $(this).removeClass("animate");
+            navContainer.find(".btn_nav").each(function(i){
+               $(this).removeClass("animateIn");
+               $(this).removeClass("animateOut");
+               $(this).removeAttr('style');
             });
-         }, 300);
+         }, 100);
 
          // Bring in new categories
          setTimeout(function(){
             showNav(navLink);
-         }, 10);
+         }, 100);
 
       };
-
    });
 
    // Show new categories | Animate in
    function showNav(navLink) {
       navLink.removeClass("hide");
-
       navLink.find(".btn_nav").each(function(i){
          var row = $(this);
          setTimeout(function() {
             row.addClass("animateIn");
          }, 100*i);
       });
-
    };
+
+   //Test change buttons
+   $("#selected_cat_1 .change").click(function() {
+      $("#nav_main").toggle();
+      showNav($("#nav_main"));
+   });
+
+   //Test change buttons
+   $("#selected_cat_2 .change").click(function() {
+      showNav($("#nav_women"));
+   });
 
 });
