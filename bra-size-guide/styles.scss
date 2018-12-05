@@ -1,0 +1,144 @@
+/* [[ Mixins ]] */
+
+
+/* [[ Variables ]] */
+
+$brand-color: #e31937;
+
+
+/* [[ PAGE ]] */
+
+html, body {
+   height: 100%;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+}
+
+h3 {
+   margin-top: 4px;
+   font-size: 24px;
+   margin-bottom: 0;
+}
+
+p, li, input {
+   font-size: 19px;
+   color: #0d0d0c;
+}
+
+p {
+   margin-bottom: -5px;
+}
+
+ul {
+   margin-top: 5px;
+}
+
+a {
+   text-decoration: underline;
+   color: #0d0d0c;
+}
+
+
+// Swiper
+
+.swiper-slide {
+   text-align: center;
+   background-color: #fff;
+   height: auto;
+}
+
+.swiper-container-horizontal > .swiper-pagination-progressbar {
+   top: auto;
+   bottom: 0;
+   position: fixed;
+}
+
+.swiper-steps {
+   overflow: hidden;
+   margin-bottom: 4px;
+
+   .step {
+      overflow: hidden;
+      padding: 20px;
+   }
+}
+
+.swiper-options {
+   margin-top: 20px;
+
+   .option {
+      width: 80%;
+      border: 2px solid #fff;
+      background-color: #f4f4f4;
+
+      p {
+         margin: 6px 0 5px;
+      }
+   }
+
+   .swiper-slide-active {
+      border: 2px solid $brand-color;
+   }
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+   background: $brand-color;
+}
+
+
+// Slide objects
+
+.btn-group {
+   margin-top: 20px;
+
+   .btn {
+      min-height: 56px;
+      line-height: 56px;
+      padding: 0 2em;
+      border: none;
+
+      &:after {
+
+      }
+   }
+}
+
+.active-back {
+   text-indent: -999px;
+   background-color: #313030;
+   border-color: #313030;
+   background-image: url('images/right-arrow.svg');
+   background-repeat: no-repeat;
+   transform: scaleX(-1);
+   -webkit-transform: scaleX(-1);
+   background-size: 14px;
+   background-position: 50%;
+}
+
+.active-next {
+   &:after {
+      top: 2px;
+      left: 4px;
+      position: relative;
+      display: inline-block;
+      content: "";
+      background-image: url('images/right-arrow.svg');
+      width: 14px;
+      height: 14px;
+   }
+}
+
+.input-container {
+   margin-top: 20px;
+}
+
+video {
+   margin: 13px -20px 0;
+}
+
+.subhead {
+   margin-top: 26px;
+}

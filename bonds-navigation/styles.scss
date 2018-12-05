@@ -10,6 +10,8 @@ $easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
 $easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
 $easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
 
+$easeOutCustom: cubic-bezier(.06,1.33,.73,.97);
+
 
 /* -- OVERWRITES --*/
 
@@ -31,15 +33,6 @@ a {
       text-decoration: none;
       border-bottom: 0;
    }
-}
-
-
-/* -- ANIMATIONS -- */
-
-.zoom-out {
-   transition: all 0.2s;// $easeInCubic;
-   transform: scale(0) !important;
-   opacity: 0 !important;
 }
 
 
@@ -137,18 +130,25 @@ nav {
    }
 }
 
+
 /* Selected Categories */
 #selected_cat_1 {
    border-top: none;
 }
 
 .selected_cat_container {
-   //display: none;
-   height: 0;
    background-color: #000;
    color: #fff;
+
+   // Animation | set up
+   height: 0;
    transition: all 0.5s $easeOutQuint;
    //border-top: 1px solid #666666; need to add in
+
+   //Animate container
+   &.animateIn {
+      height: 50px;
+   }
 
    &:after {
       display: block;
@@ -157,11 +157,13 @@ nav {
    }
 }
 
-.cat_label {
+// Animate actual button
+.clone {
    padding: 10px;
    width: 66.66%;
    float: left;
    z-index: 9;
+   transition: all 0.4s $easeOutCustom;
 
    &:after {
       display: block;
@@ -169,12 +171,14 @@ nav {
       content: "";
    }
 
+   // Animation | Reduce size of nav image to fit in nav bar
    .img {
       float: left;
       width: 30px !important;
       transition: all 300ms $easeOutCubic; //match to js
    }
 
+   // Move label to right of image
    .label {
       float: left;
       color: #fff;
@@ -194,10 +198,16 @@ nav {
    line-height: 48px;
    color: #ffffff;
 
-   //animation
+   // Animation | Set up
    height: 0;
    opacity: 0;
    transition: all 300ms; //match to js
+
+   // Animation
+   &.animateIn {
+      height: 50px;
+      opacity: 100;
+   }
 }
 
 /* Categories */
@@ -212,14 +222,33 @@ li.nav_item {
    text-align: center;
    padding: 10px 5px;
    height: 135px; //to keep scale
+
+   a.btn_nav {
+      // Animation | Set up
+      transform: scale(1);
+      opacity: 0;
+      margin-top: 200px;
+
+      // Animation
+      &.animateIn {
+         margin-top: 0;
+         opacity: 1;
+         transition: all 0.4s $easeOutCustom;
+      }
+
+      // Animation
+      &.animateOut {
+         transform: scale(0);
+         opacity: 0;
+         transition: all 0.2s;
+      }
+   }
 }
 
 a.btn_nav {
    text-align: center;
    display: inline-block;
    -webkit-tap-highlight-color: transparent;
-   transform: scale(1); //for animation
-   opacity: 1;
 
    .img {
       display: inline-block;
