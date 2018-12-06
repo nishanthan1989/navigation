@@ -2,8 +2,9 @@ $(document).ready(function() {
 
    //var selectedCat1 = "#nav_main";
    //var selectedCat2 = "#nav_women";
+   var navLink = "";
 
-   //Animate in first Categories
+   //Animate in first categories
    showNav($("#nav_main"));
 
    /* -- NAV BUTTON CLICK -- */
@@ -18,7 +19,7 @@ $(document).ready(function() {
       // If this is not a direct link to a page then:
       if ($(this).data("link") != "direct") {
 
-         var navLink = $("#nav_" + $(this).data("link"));
+         navLink = $("#nav_" + $(this).data("link"));
 
          // Make a clone of the clicked item
          var navItem = $(this).clone();
@@ -43,16 +44,15 @@ $(document).ready(function() {
             "left": navEndPos.left
          }, 0);
          navItem.addClass("clone"); // Handle other animations via CSS
-
          navContainer.css({"position": "absolute"}); // Added so incoming nav can position properly
 
          // Animate the selected category bar
          selectedBar.addClass("animateIn");
-
          // Animate change button
          selectedBar.children(".change").addClass("animateIn");
 
-         // Wait for the moving animation to finish, then remove and reset old nav
+         // Wait for the clone animation to finish then;
+         // remove and reset old nav
          setTimeout(function(){
             navContainer.removeAttr("style").toggle();
             navContainer.find(".btn_nav").each(function(i){
@@ -74,22 +74,41 @@ $(document).ready(function() {
    function showNav(navLink) {
       navLink.removeClass("hide");
       navLink.find(".btn_nav").each(function(i){
-         var row = $(this);
+         var menuBTN = $(this);
          setTimeout(function() {
-            row.addClass("animateIn");
+            menuBTN.addClass("animateIn");
          }, 100*i);
       });
    };
 
-   //Test change buttons
+   // Change buttons 1 (quick version)
    $("#selected_cat_1 .change").click(function() {
       $("#nav_main").toggle();
       showNav($("#nav_main"));
+
+      // Current nav
+      navLink.toggle();
+
+      $("#selected_cat_1").removeClass("animateIn");
+      $("#selected_cat_1 .clone").remove();
+      $("#selected_cat_1").children(".change").removeClass("animateIn");
+
+      $("#selected_cat_2").removeClass("animateIn");
+      $("#selected_cat_2 .clone").remove();
+      $("#selected_cat_2").children(".change").removeClass("animateIn");
    });
 
-   //Test change buttons
+   // Change buttons 2 (quick version)
    $("#selected_cat_2 .change").click(function() {
+      $("#nav_women").toggle();
       showNav($("#nav_women"));
+
+      // Current nav
+      navLink.toggle();
+
+      $("#selected_cat_2").removeClass("animateIn");
+      $("#selected_cat_2 .clone").remove();
+      $("#selected_cat_2").children(".change").removeClass("animateIn");
    });
 
 });
