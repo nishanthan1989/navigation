@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+   // BONDS AND CO
+
+   $("#bonds_co").accordion({
+      active: false,
+      collapsible: true,
+      animate: "easeInOutExpo"
+   });
+
+
+   // NAV STUFF
+
    //var selectedCat1 = "#nav_main";
    //var selectedCat2 = "#nav_women";
    var navLink = "";
