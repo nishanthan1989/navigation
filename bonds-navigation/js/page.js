@@ -92,7 +92,7 @@ $(document).ready(function() {
       });
    };
 
-   // Change buttons 1 (quick version)
+   // Change buttons 1 (hack version)
    $("#selected_cat_1 .change").click(function() {
       $("#nav_main").toggle();
       showNav($("#nav_main"));
@@ -109,7 +109,7 @@ $(document).ready(function() {
       $("#selected_cat_2").children(".change").removeClass("animateIn");
    });
 
-   // Change buttons 2 (quick version)
+   // Change buttons 2 (hack version)
    $("#selected_cat_2 .change").click(function() {
       $("#nav_women").toggle();
       showNav($("#nav_women"));
