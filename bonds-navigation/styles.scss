@@ -1,15 +1,13 @@
 /* -- VARIABLES -- */
+
 $white: #ffffff;
 $offwhite: #fafafa;
 
 
 /* -- ANIMATIONS -- */
 
-$easeInCubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 $easeOutCubic: cubic-bezier(0.215, 0.61, 0.355, 1);
-$easeInQuint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
 $easeOutQuint: cubic-bezier(0.23, 1, 0.32, 1);
-
 $easeOutCustom: cubic-bezier(.06,1.33,.73,.97);
 
 
@@ -101,16 +99,25 @@ nav {
 }
 
 /* Bonds & co */
-.bonds_co {
+#bonds_co {
    text-align: center;
    background-color: #fff;
    padding: 10px 0 3px;
    border-bottom: 1px solid #d1d1d1;
    box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.03);
 
-   .bonds_co_logo {
-      display: inline-block;
+   &:after {
+      display: block;
+      content: "";
+      clear: both;
    }
+}
+
+.bonds_co_logo {
+   display: inline-block;
+
+   border: none;
+   background: none;
 
    .bandcologo {
       float: left;
@@ -118,15 +125,52 @@ nav {
       margin-right: 8px;
    }
 
-   .chevron {
-      float: left;
+   .ui-icon {
+      float: right;
       width: 20px;
+      height: 14px;
+      background-image: url(images/nav/bco-chevron.gif);
+      background-size: contain;
+      background-position: 0 0;
    }
 
-   &:after {
-      display: block;
-      content: "";
-      clear: both;
+   .ui-icon-triangle-1-e {}
+
+   .ui-icon-triangle-1-s {
+      -moz-transform: scaleY(-1);
+      -o-transform: scaleY(-1);
+      -webkit-transform: scaleY(-1);
+      transform: scaleY(-1);
+      filter: FlipV;
+      -ms-filter: "FlipV";
+   }
+
+   &:focus {
+      outline: -webkit-focus-ring-color auto 0;
+   }
+}
+
+.bonds_co_brands {
+   background: none;
+   border: none;
+   margin: 10px 0;
+   padding: 0 10px;
+
+   ul {}
+
+   li {
+      float: left;
+      text-align: center;
+      width: 50%;
+      padding: 10px 0;
+
+      &:nth-of-type(2n+1) {
+         clear: left;
+      }
+   }
+
+   img {
+      display: inline-block;
    }
 }
 
@@ -139,6 +183,7 @@ nav {
 .selected_cat_container {
    background-color: #000;
    color: #fff;
+   //position: relative;
 
    // Animation | set up
    height: 0;
@@ -264,4 +309,77 @@ a.btn_nav {
       line-height: 0;
       margin: 17px 0 7px;
    }
+}
+
+
+/* PAGE HEADER */
+
+header {
+   height: 45px;
+   background-color: #fff;
+   border-bottom: 1px solid #d1d1d1;
+   box-sizing: content-box;
+
+   &:after {
+      display: block;
+      content: "";
+      clear: both;
+   }
+}
+
+.hamburger {
+   float: left;
+   width: 45px;
+   height: 45px;
+   border-right: 1px solid #d1d1d1;
+}
+
+.logo {
+   float: left;
+   margin-top: 10px;
+   margin-left: 10px;
+
+   img {
+      width: 95px;
+   }
+}
+
+.right {
+   float: right;
+   margin-right: 10px;
+}
+
+.search {
+   float: left;
+   margin-top: 10px;
+
+   img {
+      height: 25px;
+   }
+}
+
+.wishlist {
+   float: left;
+   margin-top: 11px;
+   margin-left: 7px;
+
+   img {
+      height: 22px;
+   }
+}
+
+.cart {
+   float: left;
+   margin-top: 8px;
+   margin-left: 9px;
+
+   img {
+      height: 25px;
+   }
+}
+
+/* PAGE BODY */
+
+.page {
+   background-color: #fafafa;
 }
