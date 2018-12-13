@@ -98,6 +98,7 @@ nav {
    box-sizing: content-box;
    min-height: 100%;
    position: relative;
+   padding-bottom: 30px;
 }
 
 /* Bonds & co */
@@ -369,7 +370,7 @@ header {
 .wishlist {
    float: left;
    margin-top: 11px;
-   margin-left: 7px;
+   margin-left: 12px;
 
    img {
       height: 22px;
@@ -379,7 +380,7 @@ header {
 .cart {
    float: left;
    margin-top: 8px;
-   margin-left: 9px;
+   margin-left: 14px;
 
    img {
       height: 25px;
