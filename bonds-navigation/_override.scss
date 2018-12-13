@@ -1,0 +1,26 @@
+@media (max-width: 768px) {
+   .nav_main > ul > li {
+      border-right: none;
+      border-bottom: none;
+      width: 50%;
+   }
+
+   .header {
+      border: none;
+      //border-right: 5px solid #d1d1d1 !important;
+      //width: 269px;
+   }
+
+   .push_when_sidepanel_is_open #l_content {
+      padding: 25px 0 0;
+   }
+
+   .nav_main > ul {
+      -webkit-transform: scale(1);
+      -moz-transform: scale(1);
+      -ms-transform: scale(1);
+      -o-transform: scale(1);
+      transform: scale(1);
+      //display: none;
+   }
+}

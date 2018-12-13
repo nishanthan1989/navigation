@@ -1,3 +1,5 @@
+@import "override";
+
 /* -- VARIABLES -- */
 
 $white: #ffffff;
@@ -200,37 +202,37 @@ nav {
       clear: both;
       content: "";
    }
-}
 
-// Animate actual button
-.clone {
-   padding: 10px;
-   width: 66.66%;
-   float: left;
-   z-index: 9;
-   transition: all 0.4s $easeOutCustom;
-
-   &:after {
-      display: block;
-      clear: both;
-      content: "";
-   }
-
-   // Animation | Reduce size of nav image to fit in nav bar
-   .img {
+   // Animate actual button
+   .clone {
+      padding: 10px;
+      width: 66.66%;
       float: left;
-      width: 30px !important;
-      transition: all 300ms $easeOutCubic; //match to js
-   }
+      z-index: 9;
+      transition: all 0.4s $easeOutCustom;
 
-   // Move label to right of image
-   .label {
-      float: left;
-      color: #fff;
-      width: auto !important;
-      margin: 3px 10px 0 10px  !important;
-      line-height: 1.4em !important;
-      transition: all 300ms; //match to js
+      &:after {
+         display: block;
+         clear: both;
+         content: "";
+      }
+
+      // Animation | Reduce size of nav image to fit in nav bar
+      .img {
+         float: left;
+         width: 30px !important;
+         transition: all 300ms $easeOutCubic; //match to js
+      }
+
+      // Move label to right of image
+      .label {
+         float: left;
+         color: #fff;
+         width: auto !important;
+         margin: 3px 10px 0 10px  !important;
+         line-height: 1.4em !important;
+         transition: all 300ms; //match to js
+      }
    }
 }
 
@@ -259,6 +261,10 @@ nav {
 ul.cat_container {
    overflow: hidden;
    margin-top: 10px;
+
+   &.hide {
+      display: none !important;
+   }
 }
 
 li.nav_item {
@@ -267,33 +273,31 @@ li.nav_item {
    text-align: center;
    padding: 10px 5px;
    height: 135px; //to keep scale
-
-   a.btn_nav {
-      // Animation | Set up
-      transform: scale(1);
-      opacity: 0;
-      margin-top: 200px;
-
-      // Animation
-      &.animateIn {
-         margin-top: 0;
-         opacity: 1;
-         transition: all 0.4s $easeOutCustom;
-      }
-
-      // Animation
-      &.animateOut {
-         transform: scale(0);
-         opacity: 0;
-         transition: all 0.2s;
-      }
-   }
 }
 
-a.btn_nav {
+.btn_nav {
    text-align: center;
    display: inline-block;
    -webkit-tap-highlight-color: transparent;
+
+   // Animation | Set up
+   transform: scale(1);
+   opacity: 0;
+   margin-top: 200px;
+
+   // Animation
+   &.animateIn {
+      margin-top: 0;
+      opacity: 1;
+      transition: all 0.4s $easeOutCustom;
+   }
+
+   // Animation
+   &.animateOut {
+      transform: scale(0);
+      opacity: 0;
+      transition: all 0.2s;
+   }
 
    .img {
       display: inline-block;
@@ -308,6 +312,10 @@ a.btn_nav {
       width: 100%;
       line-height: 0;
       margin: 17px 0 7px;
+      text-transform: none;
+      font-size: 16px;
+      font-family: "Futura W01 Book", Futura, sans-serif;
+      color: #333333;
    }
 }
 
