@@ -8,7 +8,13 @@
    .header {
       border: none;
       //border-right: 5px solid #d1d1d1 !important;
-      width: 267px;
+      width: 275px;
+      box-sizing: border-box;
+      -webkit-transform: translate3d(-275px, 0, 0);
+      -moz-transform: translate3d(-275px, 0, 0);
+      -ms-transform: translate3d(-275px, 0, 0);
+      -o-transform: translate3d(-275px, 0, 0);
+      transform: translate3d(-275px, 0, 0);
    }
 
    .push_when_sidepanel_is_open #l_content {
@@ -23,4 +29,14 @@
       transform: scale(1);
       //display: none;
    }
+
+   .nav_is_open.is_pushed_right,
+   .header_mobile.is_pushed_right {
+      -webkit-transform: translate3d(275px, 0, 0);
+      -moz-transform: translate3d(275px, 0, 0);
+      -ms-transform: translate3d(275px, 0, 0);
+      -o-transform: translate3d(275px, 0, 0);
+      transform: translate3d(275px, 0, 0);
+   }
+
 }

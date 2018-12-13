@@ -1,13 +1,22 @@
-// function($){
-  // jQuery(function() {
-    // Using string as string cat is handled well by browsers
-    // https://stackoverflow.com/questions/51185/are-javascript-strings-immutable-do-i-need-a-string-builder-in-javascript
-    var s = "";
-    for (var i = 0; i < 40; i++){
-      s += "Join Bonds & Me ";
-    }
+$(document).ready(function() {
 
-    jQuery(".marquee .inner").append(s);
-    jQuery(".marquee").addClass('loaded');
-  // });
-// }(jQuery);
+   var a = "";
+   var b = "";
+   var c = "";
+   var d = "";
+
+   for (var i = 0; i < 40; i++) {
+      a += "Join Bonds & Me &nbsp;&nbsp;&nbsp;";
+      b += "Alternate Apparel &nbsp;&nbsp;&nbsp;";
+      c += "Personalise my Bonds &nbsp;&nbsp;&nbsp;";
+      d += "Crop & wirefree &nbsp;&nbsp;&nbsp;";
+   }
+
+   $(".marquee").addClass('loaded');
+
+   $(".m1 .inner").append(a);
+   $(".m2 .inner").append(b);
+   $(".m3 .inner").append(c);
+   $(".m4 .inner").append(d);
+
+});
