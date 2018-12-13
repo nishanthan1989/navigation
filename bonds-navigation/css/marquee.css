@@ -1,0 +1,60 @@
+.marquee {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 50px;
+  background-color: transparent;
+  color: white;
+  font-size: 40px;
+  -webkit-flex-direction: normal;
+  flex-direction: normal;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+.marquee.loaded {
+  display: -webkit-flex;
+  display: flex;
+}
+.marquee.loaded .inner {
+  display: -webkit-flex;
+  display: flex;
+}
+.marquee .inner {
+  display: none;
+  position: absolute;
+  align-items: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+  top: 50%;
+  -moz-transform: translate3d(0, -50%, 0);
+  -webkit-transform: translate3d(0, -50%, 0);
+  transform: translate3d(0, -50%, 0);
+  -webkit-align-items: center;
+  align-items: center;
+  -moz-animation: moveInner 100s linear infinite;
+  -webkit-animation: moveInner 100s linear infinite;
+  animation: moveInner 100s linear infinite;
+}
+
+@-moz-keyframes moveInner {
+  100% {
+    -moz-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+@-webkit-keyframes moveInner {
+  100% {
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+@keyframes moveInner {
+  100% {
+    -moz-transform: translate3d(-50%, -50%, 0);
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+body {
+  background-color: black;
+}
