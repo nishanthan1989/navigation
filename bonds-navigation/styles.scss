@@ -320,8 +320,32 @@ li.nav_item {
    }
 }
 
+.waiting {
+   animation: bounce 0.3s infinite alternate;
+   -webkit-animation: bounce 0.3s infinite alternate;
+}
 
-/* PAGE HEADER */
+@keyframes bounce {
+   from {
+      transform: translateY(0px);
+   }
+
+   to {
+      transform: translateY(-10px);
+   }
+}
+@-webkit-keyframes bounce {
+   from {
+      transform: translateY(0px);
+   }
+
+   to {
+      transform: translateY(-10px);
+   }
+}
+
+
+/* OFF CANVAS NAV HEADER */
 
 header {
    height: 45px;
@@ -334,6 +358,16 @@ header {
       content: "";
       clear: both;
    }
+}
+
+/* ACTUALHEADER */
+
+.header_mobile {
+   transition: top 0.4s $easeOutQuint;
+}
+
+.nav-up {
+   top: -46px;
 }
 
 .hamburger {
@@ -391,4 +425,14 @@ header {
 
 .page {
    background-color: #fafafa;
+
+   input {
+      border: none;
+      border-bottom: 2px solid #dbdddc;
+
+      &::placeholder {
+         color: #333;
+         font-size: 16px;
+      }
+   }
 }

@@ -21,14 +21,14 @@ $(document).ready(function() {
    /* -- NAV BUTTON CLICK -- */
    $(".btn_nav").click(function() {
 
-      // Animate other items
-      var navContainer = $("#" + $(this).closest(".cat_container").attr("id"));
-      navContainer.find(".btn_nav").not(this).each(function() {
-         $(this).addClass("animateOut");
-      });
-
       // If this is not a direct link to a page then:
       if ($(this).data("link") != "direct") {
+
+         // Animate other items
+         var navContainer = $("#" + $(this).closest(".cat_container").attr("id"));
+         navContainer.find(".btn_nav").not(this).each(function() {
+            $(this).addClass("animateOut");
+         });
 
          navLink = $("#nav_" + $(this).data("link"));
 
@@ -78,7 +78,12 @@ $(document).ready(function() {
             showNav(navLink);
          }, 100);
 
+      } else {
+
+         $(this).addClass("waiting")
+
       };
+
    });
 
    // Show new categories | Animate in
@@ -121,5 +126,59 @@ $(document).ready(function() {
       $("#selected_cat_2 .clone").remove();
       $("#selected_cat_2").children(".change").removeClass("animateIn");
    });
+
+
+   /* -- HIDE/SHOW NAVIGATION ON SCROLL -- */
+
+   // Hide .header_mobile on on scroll down
+   var didScroll;
+   var lastScrollTop = 0;
+   var delta = 0;
+   var navbarHeight = $('.header_mobile').outerHeight();
+
+   $(window).scroll(function(event) {
+      didScroll = true;
+   });
+
+   setInterval(function() {
+      if (didScroll) {
+         hasScrolled();
+         didScroll = false;
+      }
+   }, 250);
+
+   function hasScrolled() {
+      var st = $(this).scrollTop();
+
+      // Make sure they scroll more than delta
+      if (Math.abs(lastScrollTop - st) <= delta)
+         return;
+
+      // If they scrolled down and are past the navbar, add class .nav-up.
+      // This is necessary so you never see what is "behind" the navbar.
+      if (st > lastScrollTop && st > navbarHeight) {
+         // Scroll Down
+         $('.header_mobile').addClass('nav-up');
+      } else {
+         // Scroll Up
+         if (st + $(window).height() < $(document).height()) {
+            $('.header_mobile').removeClass('nav-up');
+         }
+      }
+
+      lastScrollTop = st;
+   }
+
+
+   /* -- SCROLL UP SEARCH BAR ON CLICK -- */
+   /*
+   $( '#search' ).click(function() {
+      $( 'html, body').animate({
+         scrollTop: $( '#search' ).offset().top
+      }, 300, 'easeOutCubic');
+
+      $('.header_mobile').addClass('nav-up');
+   });
+   */
 
 });
