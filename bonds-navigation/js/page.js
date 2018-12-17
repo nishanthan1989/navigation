@@ -51,8 +51,8 @@ $(document).ready(function() {
             "left": navStartingPos.left
          });
          navItem.animate({
-            "top": navEndPos.top,
-            "left": navEndPos.left
+            "top": 0,
+            "left": 0
          }, 0);
          navItem.addClass("clone"); // Handle other animations via CSS
          navContainer.css({"position": "absolute"}); // Added so incoming nav can position properly
@@ -99,16 +99,24 @@ $(document).ready(function() {
 
    // Change buttons 1 (hack version)
    $("#selected_cat_1 .change").click(function() {
+
+      // Show main nav
       $("#nav_main").toggle();
       showNav($("#nav_main"));
 
       // Current nav
-      navLink.toggle();
+      $("#nav_women").addClass("hide");
+      $("#nav_women").find(".btn_nav").removeClass("animateIn");
 
+      $("#nav_womens_bras").addClass("hide");
+      $("#nav_womens_bras").find(".btn_nav").removeClass("animateIn");
+
+      // Reset sub-category change 1
       $("#selected_cat_1").removeClass("animateIn");
       $("#selected_cat_1 .clone").remove();
       $("#selected_cat_1").children(".change").removeClass("animateIn");
 
+      // Reset sub-category change 2
       $("#selected_cat_2").removeClass("animateIn");
       $("#selected_cat_2 .clone").remove();
       $("#selected_cat_2").children(".change").removeClass("animateIn");
@@ -120,7 +128,8 @@ $(document).ready(function() {
       showNav($("#nav_women"));
 
       // Current nav
-      navLink.toggle();
+      $("#nav_womens_bras").addClass("hide");
+      $("#nav_womens_bras").find(".btn_nav").removeClass("animateIn");
 
       $("#selected_cat_2").removeClass("animateIn");
       $("#selected_cat_2 .clone").remove();
