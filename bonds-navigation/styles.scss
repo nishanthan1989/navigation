@@ -46,6 +46,26 @@ body {
    width: 10px;
 }
 
+/* Free shipping */
+
+.free-shipping {
+   background-color: #222;
+   color: #fff;
+   text-align: center;
+   font-size: 13px;
+   border-bottom: 1px solid #444;
+   padding: 5px 0;
+   letter-spacing: 0.3px;
+
+   i {
+      font-size: 12px;
+      margin-right: 4px;
+      position: relative;
+      top: 1px;
+   }
+}
+
+
 /* Search */
 .search {
    margin-bottom: 10px;
@@ -367,7 +387,7 @@ header {
 }
 
 .nav-up {
-   top: -46px;
+   top: -80px;
 }
 
 .hamburger {
@@ -433,6 +453,19 @@ header {
       &::placeholder {
          color: #333;
          font-size: 16px;
+      }
+   }
+}
+
+/* OFFERS ONLY */
+
+@media (max-width: 768px) {
+   #nav_womens_offers {
+      > li {
+         width: 100%;
+      }
+      .btn_nav .img {
+         float: left;
       }
    }
 }

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+	<title>Promo Slider Bar</title>
+	<link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/pacbrands/bonds2/css/styles.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/pacbrands/bonds2/css/quickcheckout.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/base/default/afterpay/css/afterpay.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/pacbrands/bonds2/algoliasearch/bundle.css" media="all" />
+
+	<script type="text/javascript" src="./base/modernizr-custom.js"></script>
+	<script type="text/javascript" src="./base/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./base/jquery-migrate-1.2.1.min.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+	<meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+
+	<!-- Swiper -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js"></script>
+
+	<!-- Remove -->
+	<style>
+		html,
+		body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		.bg {
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			background-position: top center;
+			background-image: url(images/bgmobile.jpg);
+		}
+
+		@media only screen and (min-width: 600px) {
+			.bg {
+				background-image: url(images/bgdesktop.jpg);
+				background-size: cover;
+			}
+		}
+	</style>
+
+	<!-- Styles -->
+	<style>
+		.foot_banner {
+			background-color: #000;
+			color: #fff;
+			padding: 0 22px;
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+		}
+
+		.foot_banner .close_container {
+			display: block;
+			position: absolute;
+			top: -30px;
+			height: 30px;
+			width: 30px;
+			right: 20px;
+			background-image: url('images/closebg.svg');
+		}
+
+		.close_container .icon {
+			cursor: pointer;
+			background-image: url('images/up.svg');
+			background-repeat: no-repeat;
+			background-size: 10px 10px;
+			background-position: center center;
+			margin: 10px 0 0 8px;
+			width: 14px;
+			height: 14px;
+		}
+
+		.close_container .icon.close {
+			background-image: url('images/close.svg');
+			width: 14px;
+			height: 14px;
+		}
+
+		.foot_banner .timer {
+			height: 2px;
+			width: 100%;
+			background-color: #333;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+
+		.timer .timer-bar {
+			width: 0;
+			height: 2px;
+			background-color: #ae00ff;
+		}
+
+		.promo-slide {
+			padding: 15px 0;
+			color: #fff;
+		}
+
+		@media only screen and (min-width: 600px) {
+			.promo-slide {
+				text-align: center;
+			}
+		}
+
+		a.promo-slide:hover,
+		a.promo-slide:active,
+		a.promo-slide {
+			color: #fff;
+			border-bottom: none;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- Banner -->
+	<div class="foot_banner">
+		<div class="close_container">
+			<div class="icon close"></div>
+		</div>
+		<div class="timer">
+			<div class="timer-bar"></div>
+		</div>
+		<div class="promo-slide-container swiper-container">
+			<div class="promo-slide-wrapper swiper-wrapper">
+				<a href="#" class="promo-slide swiper-slide">Buy 2 save 30%, buy 3 save 40% ></a>
+				<a href="#" class="promo-slide swiper-slide">2 for $39 zippys ></a>
+				<a href="#" class="promo-slide swiper-slide">Buy 2 save 30% on kids sleep sets ></a>
+				<a href="#" class="promo-slide swiper-slide">30% off kids undies & socks ></a>
+			</div>
+		</div>
+	</div>
+
+	<!-- remove, temp only -->
+	<div class="bg">
+	</div>
+
+	<script>
+		(function($) {
+
+			/**
+			 * Generic Cookie Setter
+			 * @param name
+			 * @param value
+			 * @param days
+			 */
+			function setCookie(name, value, days) {
+				var expires = "";
+				if (days) {
+					var date = new Date();
+					date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+					expires = "; expires=" + date.toUTCString();
+				}
+				document.cookie = name + "=" + (value || "") + expires + "; path=/";
+			}
+
+			/**
+			 * Generic cookie getter
+			 * @param name string
+			 * @returns {*}
+			 */
+			function getCookie(name) {
+				var nameEQ = name + "=";
+				var ca = document.cookie.split(';');
+				for (var i = 0; i < ca.length; i++) {
+					var c = ca[i];
+					while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+					if (c.indexOf(nameEQ) === 0) {
+						return c.substring(nameEQ.length, c.length);
+					}
+				}
+				return null;
+			}
+
+			//Change to next promo and restart timer bar
+			function nextPromo() {
+				$(this).css({
+					width: 0
+				});
+				if (!promoClosed && !promoPressed) {
+					promoSwiper.slideNext(); //change promo
+					timePromo();
+				}
+			}
+
+			// Start 'timer', kicking it off from last position
+			function timePromo() {
+				var totalWidth = $footBanner.find('.timer').width();
+				var currentWidth = $footBanner.find('.timer-bar').width();
+				var adjustedSlideTime = slideTime - (slideTime * (currentWidth / totalWidth));
+				if (adjustedSlideTime === 0) {
+					adjustedSlideTime = slideTime;
+				}
+				$footBanner.find('.timer-bar').animate({
+					width: '100%'
+				}, adjustedSlideTime, "linear", nextPromo);
+			}
+			var promoClosed = getCookie('promoClosed');
+			var promoPressed = false;
+			var $footBanner = $('.foot_banner');
+			var slideTime = 5000;
+
+			// Initiate swiper
+			var promoSwiper = new Swiper('.foot_banner .promo-slide-container', {
+				loop: true,
+				autoHeight: true,
+				//onlyExternal: true //don't allow touch control of slider, only api control
+			});
+			if (!promoClosed) {
+				timePromo();
+			}
+
+			// Stop 'timer' on slide click/mouse over. Restart on mouse out (if it wasn't a click that stopped it)
+			$footBanner.find('.promo-slide-container').on('click', function() {
+				promoPressed = true;
+				//clicked - fill timer bar quickly
+				$footBanner.find('.timer-bar').animate({
+					width: '100%'
+				}, 300);
+			}).on('mouseover', function() {
+				$footBanner.find('.timer-bar').stop();
+			}).on('mouseout', function() {
+				if (promoPressed) {
+					return;
+				}
+				timePromo();
+			});
+
+			promoSwiper.on('slideChangeStart', function () {
+			   $footBanner.find('.timer-bar').stop();
+			}).on('slideChangeEnd', function () {
+				$footBanner.find('.timer-bar').css({
+					width: 0
+				});
+			});
+
+			// Close button click event
+			$footBanner.find('.close').click(function() {
+				$footBanner.find('.close_container .icon').toggleClass('close');
+				var promoContainerHeight = $footBanner.outerHeight();
+				if (!promoClosed) {
+					promoClosed = true;
+					//stop animation
+					$footBanner.find('.timer-bar').stop();
+					//close it
+					$footBanner.animate({
+						bottom: -promoContainerHeight
+					}, 100, 'easeOutExpo');
+					setCookie('promoClosed', 1, 7);
+				} else {
+					promoClosed = false;
+					promoPressed = false;
+					//reset timer bar
+					$footBanner.find('.timer-bar').css({
+						width: 0
+					});
+					//open it
+					$footBanner.animate({
+						bottom: 0
+					}, 100, 'easeOutExpo');
+					//start animation
+					timePromo();
+					setCookie('promoClosed', 0, 7);
+				}
+			});
+		})(jQuery);
+
+	</script>
+
+</body>
+
+</html>

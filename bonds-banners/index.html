@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" id="top">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/pacbrands/bonds2/css/styles.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/pacbrands/bonds2/css/quickcheckout.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/base/default/afterpay/css/afterpay.css" media="all" />
+   <link rel="stylesheet" type="text/css" href="https://www.bonds.com.au/skin/frontend/pacbrands/bonds2/algoliasearch/bundle.css" media="all" />
+
+	<script type="text/javascript" src="./base/modernizr-custom.js"></script>
+	<script type="text/javascript" src="./base/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="./base/jquery-migrate-1.2.1.min.js"></script>
+	<script type="text/javascript" src="./base/jquery.colorbox-min.js"></script>
+	<script type="text/javascript" src="./base/compiled.js"></script>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+   <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no">
+
+   <!-- Swiper -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+
+	<!-- Remove -->
+	<style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.bg {
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: 100% auto;
+			background-position: top center;
+			background-image: url(images/bgmobile.jpg);
+		}
+		@media only screen and (min-width : 600px) {
+			.bg {
+				background-image: url(images/bgdesktop.jpg);
+				background-size: cover;
+			}
+		}
+	</style>
+
+   <!-- Styles -->
+   <style>
+      .foot_banner {
+         background-color: #000;
+         color: #fff;
+         padding: 15px 22px;
+         position: fixed;
+         bottom: 0;
+         width: 100%;
+			box-shadow: 0 0 4px 0px rgba(0,0,0,0.5);
+      }
+      .foot_banner .close_container {
+         display: block;
+         position: absolute;
+         top: -30px;
+         height: 30px;
+         width: 30px;
+         right: 20px;
+         background-image: url('images/closebg.svg');
+      }
+		.close_container .icon {
+			background-image: url('images/up.svg');
+			background-repeat: no-repeat;
+			background-size: 10px 10px;
+			background-position: center center;
+			margin: 10px 0 0 8px;
+         width: 14px;
+         height: 14px;
+      }
+		.close_container .icon.close {
+			background-image: url('images/close.svg');
+			width: 14px;
+         height: 14px;
+      }
+      .foot_banner .timer {
+         height: 2px;
+         width: 100%;
+         background-color: #333;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+      }
+      .timer .timer_bar {
+         width: 0;
+         height: 2px;
+         background-color: #ae00ff;
+      }
+      .promo-slide {
+         color: #fff;
+      }
+		@media only screen and (min-width : 600px) {
+			.promo-slide {
+				text-align: center;
+			}
+		}
+		a.promo-slide:hover,
+		a.promo-slide:active,
+		a.promo-slide {
+			color: #fff;
+			border-bottom: none;
+		}
+
+   </style>
+
+</head>
+
+<body>
+
+   <!-- Banner -->
+   <div class="foot_banner">
+      <div class="close_container"><div class="icon close"></div></div>
+      <div class="timer"><div class="timer_bar"></div></div>
+      <div class="promo-slide-container swiper-container">
+         <div class="promo-slide-wrapper swiper-wrapper">
+            <a href="#" class="promo-slide swiper-slide">Buy 2 save 30%, buy 3 save 40% ></a>
+            <a href="#" class="promo-slide swiper-slide">2 for $39 zippys ></a>
+            <a href="#" class="promo-slide swiper-slide">Buy 2 save 30% on kids sleep sets ></a>
+            <a href="#" class="promo-slide swiper-slide">30% off kids undies & socks ></a>
+         </div>
+      </div>
+   </div>
+
+	<!-- remove, temp only -->
+	<div class="bg">
+	</div>
+
+   <script>
+
+      var promoClosed = '';
+		var promoPressed = false;
+      //getCookie('promoClosed');
+
+      // Initiate swiper
+      var promoSwiper = new Swiper('.promo-slide-container', {
+         loop: true,
+         autoHeight: true,
+      });
+      if (promoClosed != true) {
+         timePromo();
+      }
+
+		// Start 'timer'
+      function timePromo() {
+         $(".timer_bar").animate({
+            width: '100%',
+         }, 5000, "linear", function() {
+            $(this).css({
+               width: 0,
+            });
+            if (promoClosed != true && promoPressed != true) {
+               changePromo();
+               timePromo();
+            }
+         });
+      };
+
+		// Stop 'timer' on slide click (should be mouseDown but it throws error which i dont understand)
+		$(".promo-slide-container").click(function() {
+			promoPressed = true;
+			$( ".timer_bar" ).stop().css ({
+				width: 0,
+			});
+		});
+
+      // Change promo (swiper)
+      function changePromo() {
+         promoSwiper.slideNext();
+      };
+
+      // Close button click event
+      $(".foot_banner .close").click(function() {
+			$(".close_container .icon").toggleClass('close');
+         var promoContainerHeight = $(".foot_banner").outerHeight();
+
+         if (!promoClosed == false) {
+            $(".foot_banner").animate({
+               bottom: -promoContainerHeight,
+            }, 100, 'easeOutExpo');
+
+            promoClosed = true;
+				//$.cookie('promoClosed', 1);
+            //setCookie('promoClosed', 'true', 5000);
+         } else if (promoPressed != true) {
+            $(".foot_banner").animate({
+               bottom: 0,
+            }, 100, 'easeOutExpo');
+            timePromo();
+
+            promoClosed = false;
+				//$.cookie('promoClosed', 0);
+            //setCookie('promoClosed', 'false', 5000);
+         }
+      });
+   </script>
+
+</body>
+
+</html>
