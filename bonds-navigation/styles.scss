@@ -145,16 +145,17 @@ nav {
    .bandcologo {
       float: left;
       width: 165px;
-      margin-right: 8px;
+      margin-right: 6px;
    }
 
    .ui-icon {
       float: right;
-      width: 20px;
-      height: 14px;
-      background-image: url(images/nav/bco-chevron.gif);
+      width: 13px;
+      height: 8px;
+      background-image: url(images/nav/bco-chevron.svg);
       background-size: contain;
       background-position: 0 0;
+      margin-top: 3px;
    }
 
    .ui-icon-triangle-1-e {}
