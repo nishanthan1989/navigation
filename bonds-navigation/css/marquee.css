@@ -34,9 +34,9 @@
   transform: translate3d(0, -50%, 0);
   -webkit-align-items: center;
   align-items: center;
-  -moz-animation: moveInner 100s linear infinite;
-  -webkit-animation: moveInner 100s linear infinite;
-  animation: moveInner 100s linear infinite;
+  -moz-animation: moveInner 200s linear infinite;
+  -webkit-animation: moveInner 200s linear infinite;
+  animation: moveInner 200s linear infinite;
 }
 
 @-moz-keyframes moveInner {

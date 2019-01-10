@@ -204,10 +204,17 @@ nav {
    border-top: none;
 }
 
+#selected_cat_2 {
+   background-color: #1a1a1a;
+}
+
 .selected_cat_container {
    background-color: #000;
    color: #fff;
    position: relative;
+   //-webkit-box-shadow: inset 0px 5px 5px -5px rgba(0,0,0,0.5);
+   //-moz-box-shadow: inset 0px 5px 5px -5px rgba(0,0,0,0.5);
+   //box-shadow: inset 0px 5px 5px -5px rgba(0,0,0,0.5);
 
    // Animation | set up
    height: 0;
@@ -251,7 +258,7 @@ nav {
          float: left;
          color: #fff;
          width: auto !important;
-         margin: 3px 10px 0 10px  !important;
+         margin: 3px 0 0 10px  !important;
          line-height: 1.4em !important;
          transition: all 300ms; //match to js
       }
@@ -282,7 +289,7 @@ nav {
 /* Categories */
 ul.cat_container {
    overflow: hidden;
-   margin-top: 10px;
+   margin-top: 20px;
 
    &.hide {
       display: none !important;
@@ -294,7 +301,8 @@ li.nav_item {
    width: 50%;
    text-align: center;
    padding: 10px 5px;
-   height: 135px; //to keep scale
+   //height: 135px; //to keep scale
+   height: 150px;
 }
 
 .btn_nav {
@@ -332,8 +340,8 @@ li.nav_item {
    .label {
       display: block;
       width: 100%;
-      line-height: 0;
-      margin: 17px 0 7px;
+      line-height: 1em;
+      margin: 5px 0 7px;
       text-transform: none;
       font-size: 16px;
       font-family: "Futura W01 Book", Futura, sans-serif;
@@ -458,15 +466,36 @@ header {
    }
 }
 
-/* OFFERS ONLY */
+/* OFFERS ONLY
+#nav_womens_offers {
+   > .nav_item {
+      width: 100%;
+      height: auto;
 
-@media (max-width: 768px) {
-   #nav_womens_offers {
-      > li {
-         width: 100%;
+      .btn_nav {
+
+         &:after {
+            display: block;
+            content: "";
+            clear: both;
+         }
       }
-      .btn_nav .img {
+
+      .img {
+         width: 60px;
+      }
+
+      .label {
+         display: inline-block;
+         width: auto;
          float: left;
+         margin-top: 30px;
+         margin-left: 20px;
       }
    }
+
+   .btn_nav .img {
+      float: left;
+   }
 }
+ */

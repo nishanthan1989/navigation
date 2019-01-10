@@ -57,6 +57,13 @@ $(document).ready(function() {
          navItem.addClass("clone"); // Handle other animations via CSS
          navContainer.css({"position": "absolute"}); // Added so incoming nav can position properly
 
+         // Change clone text to ... if too long
+         var cloneText = navItem.find(".label")
+         var textLength = cloneText.text();
+         if ( textLength.length >= 13 ) {
+            $(cloneText).text( textLength.substring(0, 13) + '...' );
+         }
+
          // Animate the selected category bar
          selectedBar.addClass("animateIn");
          // Animate change button
